@@ -80,10 +80,10 @@ import java.io.IOException;
 public class Card {
      protected int faceValue;
      protected int actualValue;
-     protected char suit;
+     protected String suit;
      protected boolean inDeck;
 
-     public Card(int fv, char s) {
+     public Card(int fv, String s) {
         faceValue = fv;
         suit = s;
         inDeck = true;
@@ -96,19 +96,19 @@ public class Card {
      public String toString() {
          String face;
          if (faceValue == 1) {
-             face = "A";
+             face = "Ace";
          }
          else if (faceValue <= 10) {
              face = String.valueOf(faceValue);
          }
          else if (faceValue == 11) {
-             face = "J";
+             face = "Jack";
          }
          else if (faceValue == 12) {
-             face = "Q";
+             face = "Queen";
          }
          else {
-             face = "K";
+             face = "King";
          }
          return face;
      }
